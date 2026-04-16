@@ -17,8 +17,7 @@ rule warn-vector-db-filter-missing {
   AND content NOT CONTAINS "filter"
   severity warning
   priority 85
-  ASK write
-  PROMPT "Are you sure you want to run a vector search without a filter? This might return data from other users/tenants."
+  LOG write
 }
 
 rule audit-embedding-model-change {
